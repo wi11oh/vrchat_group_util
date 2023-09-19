@@ -1,0 +1,2 @@
+# vrchat_group_util
+vrcのグループとかにゴニョゴニョできるやつ
