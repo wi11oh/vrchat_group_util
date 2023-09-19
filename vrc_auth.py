@@ -81,7 +81,7 @@ def mailAuth(username:str=None, password:str=None):
 
     r = requests.post(
         "https://api.vrchat.cloud/api/1/auth/twofactorauth/emailotp/verify",
-        headers={"User-Agent": "uirou_machine", "Content-Type": "application/json"},
+        headers={"User-Agent": username, "Content-Type": "application/json"},
         cookies={"auth": cookie},
         json={"code": f2acode}
     )
@@ -96,7 +96,7 @@ def codeAuth(username:str=None, password:str=None):
 
     r = requests.post(
         "https://api.vrchat.cloud/api/1/auth/twofactorauth/totp/verify",
-        headers={"User-Agent": "uirou_machine", "Content-Type": "application/json"},
+        headers={"User-Agent": username, "Content-Type": "application/json"},
         cookies={"auth": cookie},
         json={"code": f2acode}
     )
